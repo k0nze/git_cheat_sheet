@@ -23,6 +23,21 @@ git fetch [remote_name] [remote_branch_name]:[local_branch_name]
 git checkout [local_branch_name]
 ```
 
+### Clone a Specific Branch
+```bash
+git clone --branch [remote_branch_name] [URL]
+```
+
+### Delete a Branch
+Local:
+```bash
+git branch -d [local_branch_name]
+```
+On Remote:
+```bash
+git push origin --delete [remote_branch_name]
+```
+
 
 ## Stashing
 When you want to switch to a different branch and don't want to commit your changes you can stash them.
@@ -48,6 +63,54 @@ git stash apply stash@{[number]}
 ```
 
 
+## Tagging
+### List all Tags
+```bash
+git tag
+```
+
+### Show a Specific Tag
+```bash
+git tag v[version_number]
+```
+
+### Create a new Tag at the Current Commit 
+```bash
+git tag -a v[version_number] -m "[message]"
+```
+
+### Create a new Tag at a Previous Commit
+```bash
+git tag -a v[version_number] [commit_hash] 
+```
+
+### Pushing Tag to a Remote
+By default `git push` does not push tags onto a remote. This is done by:
+```bash
+git push [remote_name] [branch_name] --tags
+```
+
+### Checkout a Specific Tag
+```bash
+git checkout v[version_number] 
+```
+
+### Checkout a Specific Tag on a New Branch
+```bash
+git checkout v[version_number] 
+git checkout -b [new_branch_name]
+```
+or
+```bash
+git checkout -b [new_branch_name] v[version_number] 
+```
+
+### Clone a Specific Tag
+```bash
+git clone --branch v[version_number] [URL]
+```
+
+
 ## Config
 ### Show Whole Config
 ```bash
@@ -64,4 +127,11 @@ git config --list --show-origin
 git config --global user.name [user_name]
 git config --global user.email [email]
 ```
+
+
+
+
+
+
+
 
