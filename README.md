@@ -111,6 +111,74 @@ git clone --branch v[version_number] [URL]
 ```
 
 
+## Submodules
+### Add a Submodule
+```bash
+git submodule add [URL_of_submodule] [directory_of_submodule] 
+```
+
+### Clone a Repository with Submodules
+```bash
+git clone [URL]
+git submodule init
+git submodule update
+```
+or
+```bash
+git clone [URL] --recursive
+```
+
+### Tie a Submodule to a Specific Branch
+```bash
+git submodule add [URL_of_submodule] [directory_of_submodule]
+cd [directory_of_submodule]
+git checkout -b [submodule_branch] [submodule_remote]/[remote_submodule_branch]
+cd -
+git commit -am "[message]"
+git push [remote] [branch]
+```
+Clone it:
+```bash
+git clone [URL] --recursive
+```
+or:
+```bash
+git clone [URL]
+git submodule update --init -recursive
+```
+
+### Tie a Submodule to a Specific Tag
+```bash
+git submodule add [URL_of_submodule] [directory_of_submodule]
+cd [directory_of_submodule]
+git checkout v[version_number] 
+cd -
+git commit -am "[message]"
+git push [remote] [branch]
+```
+Clone it:
+```bash
+git clone [URL] --recursive
+```
+or:
+```bash
+git clone [URL]
+git submodule update --init -recursive
+```
+
+
+## Delete Files
+### Delete a File from the Repsitory and your File System
+```bash
+git rm [file]
+```
+
+### Delete a File only from the Repsitory
+```bash
+git rm --cached [file]
+```
+
+
 ## Config
 ### Show Whole Config
 ```bash
