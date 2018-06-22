@@ -198,7 +198,8 @@ git config --global user.email [email]
 
 
 
-
+## Helpful Links
+[Forks and Pull Requests on GitHub](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
 
 
 
