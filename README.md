@@ -178,7 +178,7 @@ git submodule update --init -recursive
 1. Delete the relevant section from `.gitmodules`
 2. Delete the relevant section from `.git/config`
 3. Delete the submodule from the repository `git rm --cached [directory_of_submodule]`
-4. Delete the submodule from the config `rm -rf .git/submodule/[directory_of_submodule]`
+4. Delete the submodule from the config `rm -rf .git/modules/[directory_of_submodule]`
 5. Commit the changes `git commit -m "Removed submodule [submodule_name]"`
 6. Delete the submodule from the local drive `rm -rf [directory_of_submodule]` 
 
@@ -228,9 +228,9 @@ git config --global --unset [config_name]
 ```
 
 ## Helpful Links
-[Forks and Pull Requests on GitHub](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
-[Delete a Git Submodule](https://stackoverflow.com/a/1260982)
-[Setting up vim as diff Tool](https://stackoverflow.com/a/3713865)
+* [Forks and Pull Requests on GitHub](https://gist.github.com/Chaser324/ce0505fbed06b947d962) 
+* [Delete a Git Submodule](https://stackoverflow.com/a/1260982)
+* [Setting up vim as diff Tool](https://stackoverflow.com/a/3713865)
 
 
 
