@@ -212,11 +212,25 @@ git config --global user.name [user_name]
 git config --global user.email [email]
 ```
 
+### Setup Vim as diff Tool
+```bash
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+```
+Open vim as diff tool:
+```bash
+git difftool
+```
 
+### Delete a Config Entry
+```bash
+git config --global --unset [config_name]
+```
 
 ## Helpful Links
 [Forks and Pull Requests on GitHub](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
 [Delete a Git Submodule](https://stackoverflow.com/a/1260982)
+[Setting up vim as diff Tool](https://stackoverflow.com/a/3713865)
 
 
 
