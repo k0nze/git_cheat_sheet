@@ -23,6 +23,14 @@ git fetch [remote_name] [remote_branch_name]:[local_branch_name]
 git checkout [local_branch_name]
 ```
 
+### Merge Branches
+Merge branch `[A]` into branch `[B]`
+```bash
+git checkout A
+git merge B
+```
+
+
 ### Clone a Specific Branch
 ```bash
 git clone --branch [remote_branch_name] [URL]
@@ -166,6 +174,14 @@ git clone [URL]
 git submodule update --init -recursive
 ```
 
+### Delete a Submodule
+1. Delete the relevant section from `.gitmodules`
+2. Delete the relevant section from `.git/config`
+3. Delete the submodule from the repository `git rm --cached [directory_of_submodule]`
+4. Delete the submodule from the config `rm -rf .git/submodule/[directory_of_submodule]`
+5. Commit the changes `git commit -m "Removed submodule [submodule_name]"`
+6. Delete the submodule from the local drive `rm -rf [directory_of_submodule]` 
+
 
 ## Delete Files
 ### Delete a File from the Repsitory and your File System
@@ -200,7 +216,7 @@ git config --global user.email [email]
 
 ## Helpful Links
 [Forks and Pull Requests on GitHub](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
-
+[Delete a Git Submodule](https://stackoverflow.com/a/1260982)
 
 
 
