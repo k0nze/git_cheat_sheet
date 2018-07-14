@@ -30,7 +30,6 @@ git checkout A
 git merge B
 ```
 
-
 ### Clone a Specific Branch
 ```bash
 git clone --branch [remote_branch_name] [URL]
@@ -44,6 +43,20 @@ git branch -d [local_branch_name]
 On Remote:
 ```bash
 git push origin --delete [remote_branch_name]
+```
+
+## Merge Conflicts
+
+### Show Difference With Remote
+```
+git fetch
+git diff [local_branch_name] [remote_name]/[remote_branch_name]
+```
+
+### Merge
+```
+git fetch
+git merge
 ```
 
 
@@ -79,17 +92,27 @@ git tag
 
 ### Show a Specific Tag
 ```bash
-git tag v[version_number]
+git tag [tag_name]
 ```
 
 ### Create a new Tag at the Current Commit 
 ```bash
-git tag -a v[version_number] -m "[message]"
+git tag -a [tag_name] -m "[message]"
 ```
 
 ### Create a new Tag at a Previous Commit
 ```bash
-git tag -a v[version_number] [commit_hash] 
+git tag -a [tag_name] [commit_hash] 
+```
+
+### Delete a Local Tag
+```bash
+git tag --delete 
+```
+
+### Delete a Remote Tag
+```bash
+git push --delete [remote_name] [tag_name]
 ```
 
 ### Pushing Tag to a Remote
@@ -100,24 +123,23 @@ git push [remote_name] [branch_name] --tags
 
 ### Checkout a Specific Tag
 ```bash
-git checkout v[version_number] 
+git checkout [tag_name] 
 ```
 
 ### Checkout a Specific Tag on a New Branch
 ```bash
-git checkout v[version_number] 
+git checkout [tag_name] 
 git checkout -b [new_branch_name]
 ```
 or
 ```bash
-git checkout -b [new_branch_name] v[version_number] 
+git checkout -b [new_branch_name] [tag_name] 
 ```
 
 ### Clone a Specific Tag
 ```bash
-git clone --branch v[version_number] [URL]
+git clone --branch [tag_name] [URL]
 ```
-
 
 ## Submodules
 ### Add a Submodule
@@ -159,7 +181,7 @@ git submodule update --init -recursive
 ```bash
 git submodule add [URL_of_submodule] [directory_of_submodule]
 cd [directory_of_submodule]
-git checkout v[version_number] 
+git checkout [tag_name] 
 cd -
 git commit -am "[message]"
 git push [remote] [branch]
@@ -222,6 +244,13 @@ Open vim as diff tool:
 git difftool
 ```
 
+### Setup Vim as merge Tool
+```bash
+git config merge.tool vimdiff
+git config merge.conflictstyle diff3
+git config mergetool.prompt false
+```
+
 ### Delete a Config Entry
 ```bash
 git config --global --unset [config_name]
@@ -231,6 +260,6 @@ git config --global --unset [config_name]
 * [Forks and Pull Requests on GitHub](https://gist.github.com/Chaser324/ce0505fbed06b947d962) 
 * [Delete a Git Submodule](https://stackoverflow.com/a/1260982)
 * [Setting up vim as diff Tool](https://stackoverflow.com/a/3713865)
-
+* [Setting up vim as merge Tool](http://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/)
 
 
