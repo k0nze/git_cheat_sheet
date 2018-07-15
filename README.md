@@ -107,7 +107,7 @@ git tag -a [tag_name] [commit_hash]
 
 ### Delete a Local Tag
 ```bash
-git tag --delete 
+git tag --delete [tag_name]
 ```
 
 ### Delete a Remote Tag
