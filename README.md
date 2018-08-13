@@ -24,10 +24,10 @@ git checkout [local_branch_name]
 ```
 
 ### Merge Branches
-Merge branch `[A]` into branch `[B]`
+Merge branch `[B]` into branch `[A]`
 ```bash
-git checkout A
-git merge B
+git checkout [A]
+git merge [B]
 ```
 
 ### Clone a Specific Branch
