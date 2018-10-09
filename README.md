@@ -45,6 +45,21 @@ On Remote:
 git push origin --delete [remote_branch_name]
 ```
 
+## Compare two Branches
+Show files that differ in current branch from branch `[branch_name_a]`:
+```bash
+git diff --names-only [branch_name_a]
+```
+With `diff` (compares all files, add the file name after the command to only compare a single file):
+```bash
+git diff [branch_name_a]..[branch_name_b]
+```
+With `difftool` (compares all files, add the file name after the command to only compare a single file):
+```bash
+git difftool [branch_name_a]..[branch_name_b]
+```
+
+
 ## Merge Conflicts
 
 ### Show Difference With Remote
