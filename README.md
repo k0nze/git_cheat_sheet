@@ -30,6 +30,14 @@ git checkout [A]
 git merge [B]
 ```
 
+### Merge Single Files
+```bash
+git checkout [A]
+git checkout [B] [files_to_merge]
+git add [files_to_merge]
+git commit -m [commit_message]
+```
+
 ### Clone a Specific Branch
 ```bash
 git clone --branch [remote_branch_name] [URL]
