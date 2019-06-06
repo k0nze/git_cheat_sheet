@@ -279,6 +279,12 @@ git config mergetool.prompt false
 git config --global --unset [config_name]
 ```
 
+## Miscellaneous
+### Show Files that are Tracked
+```bash
+git ls-tree -r master --name-only
+```
+
 ## Helpful Links
 * [Forks and Pull Requests on GitHub](https://gist.github.com/Chaser324/ce0505fbed06b947d962) 
 * [Delete a Git Submodule](https://stackoverflow.com/a/1260982)
